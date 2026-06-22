@@ -1,0 +1,9 @@
+Trying to record intended edits: add diag calls in MonitorEstribo methods. Intended insertions:
+- After camera init: diag("MonitorEstribo inicializado: modelo=%s porta_rele=%s", modelo_path, porta_rele)
+- In _inicializar_camera: diag before and after initializing camera, on error
+- In processar_frame: diag at start, after detection count, at end with counts
+- In _processar_estribo: diag for bbox/conf and for each erro
+- In executar: diag at startup, after reading frame, after processar_frame, around relé calls
+- In limpar: diag("MonitorEstribo: recursos liberados")
+
+(Apply these edits using the normal patch tool when available.)
